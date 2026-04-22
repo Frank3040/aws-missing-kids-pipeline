@@ -15,8 +15,6 @@ Missing Kids Pipeline is a serverless, event-driven data platform on AWS and Sno
 ![Architecture diagram](images/p6-1.png)
 *Figure 1. Serverless architecture and data flow.*
 
-### *You can find the code for this project in [GitHub](https://github.com/Frank3040/Video-Streaming-Pipeline.git).*
-
 ## Dataset Description
 The source dataset is a CSV file (e.g., `base-desapariciones-dataton-2025.csv`) containing records of missing children in Chiapas from 2019 to 2025. Key fields include sex, age, age group, municipality, region, neighborhood/locality, migrant status, disappearance date, day of week, time-of-day, case status, and days missing.
 
