@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Map the project code into the container
+      - .:/workspace
+      # Map a local .aws folder to persist AWS credentials without installing AWS CLI on the host
+      - ./.aws:/root/.aws
+      # (Optional) pass local environment variables
+      - ./.env:/workspace/.env
+    # Keep container running if started with `docker compose up -d`
+    tty: true
+    stdin_open: true

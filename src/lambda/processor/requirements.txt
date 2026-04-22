@@ -1,0 +1,6 @@
+# Lambda function runtime dependencies
+# boto3 is provided by the Lambda runtime — do NOT include it here.
+# pandas + pyarrow are provided by the Lambda Layer — do NOT include them here.
+
+# Add any additional lightweight dependencies below:
+# python-dateutil==2.9.0

@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfplan
+tfplan
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!example.tfvars
+
+# Lambda Artifacts
+*.zip
+src/lambda/**/__pycache__/
+infrastructure/modules/lambda/*.zip
+infrastructure/layers/pandas-pyarrow/python/
+infrastructure/layers/pandas-pyarrow/*.zip
+
+# Data — don't commit real data
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sample.csv
+data/processed/*
+!data/processed/.gitkeep
+
+# AWS Credentials and Local Config
+.aws/
+.env.local
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+/data/processed/
+logs/
+scripts/
+
+/gitignore
+
+/snowflake
+
+/docs
+
+.github/
+
+# dbt (missing_kids project)
+missing_kids/target/
+missing_kids/dbt_packages/
+missing_kids/dbt_modules/
+missing_kids/logs/
+
+tests/

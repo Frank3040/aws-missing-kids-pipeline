@@ -1,0 +1,10 @@
+variable "project_name" { type = string }
+variable "environment" { type = string }
+variable "starter_lambda_role_arn" { type = string }
+variable "validator_lambda_role_arn" { type = string }
+variable "transformer_lambda_role_arn" { type = string }
+variable "layer_arn" { type = string }
+variable "sqs_queue_arn" { type = string }
+variable "state_machine_arn" { type = string }
+variable "raw_bucket_name" { type = string }
+variable "processed_bucket_name" { type = string }

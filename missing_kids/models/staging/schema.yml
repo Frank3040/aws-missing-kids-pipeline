@@ -1,0 +1,33 @@
+
+version: 2
+
+sources:
+  - name: bronze_missing_kids
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
+    tables:
+      - name: missing_kids_complete
+        columns:
+          - name: id
+          - name: sexo
+          - name: edad
+          - name: grupo_etario
+          - name: migrante
+          - name: fecha_de_desaparicion
+          - name: fecha_de_localizacion
+          - name: dia_de_la_semana
+          - name: horario
+          - name: dias_sin_localizar
+          - name: rango_desaparicion
+          - name: reincidencia
+          - name: numero_de_reincidencia
+          - name: estado
+          - name: region
+          - name: municipio
+          - name: estatus
+          - name: desaparicion_multiple
+          - name: persona_con_quien_desaparecio
+
+models:
+  - name: stg_missing_kids
+    description: "Staging model for missing_kids_complete raw data."

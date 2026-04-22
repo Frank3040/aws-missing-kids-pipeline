@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: dim_time
+    columns:
+      - name: time_id
+        tests:
+          - unique
+          - not_null
+      - name: fecha
+      - name: rango_horario
+
+  - name: dim_persona
+    columns:
+      - name: persona_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_geografia
+    columns:
+      - name: geo_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_estatus
+    columns:
+      - name: estatus_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_desaparicion
+    columns:
+      - name: fact_id
+        tests:
+          - unique
+          - not_null
+      - name: time_id_desaparicion
+        tests:
+          - relationships:
+              to: ref('dim_time')
+              field: time_id
+      - name: time_id_localizacion
+        tests:
+          - relationships:
+              to: ref('dim_time')
+              field: time_id
+      - name: persona_id
+        tests:
+          - relationships:
+              to: ref('dim_persona')
+              field: persona_id
+      - name: geo_id
+        tests:
+          - relationships:
+              to: ref('dim_geografia')
+              field: geo_id
+      - name: estatus_id
+        tests:
+          - relationships:
+              to: ref('dim_estatus')
+              field: estatus_id
