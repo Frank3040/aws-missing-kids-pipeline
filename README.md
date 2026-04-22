@@ -32,7 +32,7 @@ The source dataset is a CSV file (e.g., `base-desapariciones-dataton-2025.csv`) 
 The processed data can be queried in Athena and Snowflake, then connected to Power BI or QuickSight to build dashboards that highlight missing-person trends by municipality, age group, time period, and case status. dbt provides the semantic and dimensional modeling that keeps the analytics layer consistent.
 
 ![Dashboard mockup](images/p6-2.png)
-*Figure 3. Power BI dashboard.*
+*Figure 2. Power BI dashboard.*
 
 ## Technologies Used
 - AWS S3, EventBridge, SNS, SQS
